@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { StarfieldBackground } from './components/StarfieldBackground';
+import { Fairy } from './components/Fairy';
 import { Home } from './components/Home';
 import { ProfileForm } from './components/ProfileForm';
 import { BirthChart } from './components/BirthChart';
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <StarfieldBackground />
+      <Fairy />
       <Navigation />
       <main>
         <Routes>

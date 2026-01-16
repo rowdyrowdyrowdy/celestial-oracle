@@ -56,7 +56,7 @@ export function Home() {
     <div className="home-page">
       <section className="hero">
         <div className="hero-content">
-          <h1>Celestial Oracle</h1>
+          <h1>Andrea's Celestial Oracle</h1>
           <p className="hero-subtitle">
             Your personal guide to the cosmic mysteries
           </p>

@@ -18,7 +18,7 @@ export function Navigation() {
       <div className="nav-container">
         <NavLink to="/" className="nav-logo">
           <span className="nav-logo-icon">☽</span>
-          <span className="nav-logo-text">Celestial Oracle</span>
+          <span className="nav-logo-text">Andrea's Celestial Oracle</span>
         </NavLink>
 
         <ul className="nav-links">
