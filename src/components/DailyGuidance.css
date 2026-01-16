@@ -1,0 +1,221 @@
+.daily-hero {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .daily-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.hero-moon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.hero-moon-emoji {
+  font-size: 4rem;
+}
+
+.hero-moon-info h3 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+}
+
+.hero-moon-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-message {
+  text-align: center;
+}
+
+.daily-message {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.hero-sun {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.hero-sun-symbol {
+  font-size: 3rem;
+  color: var(--accent-gold);
+}
+
+.hero-sun p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Daily Grid */
+.daily-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: 900px) {
+  .daily-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.affirmation-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.affirmation-card h3 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+}
+
+.affirmation-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.affirmation-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lucky-card h3 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.lucky-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.lucky-number {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lucky-colors {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.lucky-color {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.color-name {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Cosmic Weather */
+.cosmic-weather {
+  margin-bottom: var(--spacing-xl);
+}
+
+.cosmic-weather h3 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 600px) {
+  .weather-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.weather-item h4 {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.weather-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Moon Guidance Section */
+.moon-guidance-section h3 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.moon-guidance-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.moon-guidance-content strong {
+  color: var(--accent-gold);
+}
+
+.moon-guidance-content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.moon-guidance-content li {
+  padding-left: var(--spacing-lg);
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.moon-guidance-content li::before {
+  content: '☽';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+}

@@ -1,0 +1,128 @@
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.form-hint.loading {
+  color: var(--accent-purple);
+}
+
+.form-hint.success {
+  color: var(--accent-gold);
+}
+
+.form-error {
+  padding: var(--spacing-md);
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.5);
+  border-radius: var(--radius-md);
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.form-success {
+  padding: var(--spacing-md);
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid rgba(40, 167, 69, 0.5);
+  border-radius: var(--radius-md);
+  color: #69db7c;
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.info-card h3 {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.2rem;
+}
+
+.info-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.info-card li {
+  padding-left: var(--spacing-lg);
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.info-card li::before {
+  content: '✧';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+}
+
+.info-card li strong {
+  color: var(--text-primary);
+}
+
+.profile-summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.profile-summary dt {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.profile-summary dd {
+  color: var(--text-primary);
+  font-size: 1rem;
+}

@@ -1,0 +1,251 @@
+.transits-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.moon-phase-card {
+  text-align: center;
+}
+
+.moon-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.moon-phase-card h3 {
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.moon-phase-card > p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.moon-guidance {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.moon-guidance p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.retrogrades-card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--accent-purple);
+}
+
+.retrograde-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.retrograde-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: rgba(123, 67, 151, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+.retrograde-symbol {
+  font-size: 1.2rem;
+  color: var(--accent-purple);
+}
+
+.retrograde-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.retrograde-sign {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.retrograde-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Aspects Section */
+.aspects-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.aspects-section h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.aspects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.aspect-card {
+  padding: var(--spacing-md);
+}
+
+.aspect-planets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+.aspect-planets span:first-child,
+.aspect-planets span:last-child {
+  color: var(--text-primary);
+}
+
+.aspect-type {
+  font-family: var(--font-display);
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.aspect-meaning {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.aspect-orb {
+  display: block;
+  margin-top: var(--spacing-sm);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Current Planets */
+.current-planets-section h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.transit-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.transit-card.retrograde {
+  border-color: var(--accent-purple);
+}
+
+.transit-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.transit-symbol {
+  font-size: 2rem;
+  color: var(--accent-gold);
+}
+
+.transit-card.retrograde .transit-symbol {
+  color: var(--accent-purple);
+}
+
+.transit-info h4 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.retrograde-badge {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  background: var(--accent-purple);
+  color: white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.transit-position {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+}
+
+.transit-sign-symbol {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+}
+
+.transit-sign-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.transit-degree {
+  margin-left: auto;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.transit-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.transit-element {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.element-badge,
+.modality-badge {
+  font-size: 0.7rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.element-badge {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.element-badge.fire { color: #ff6b6b; border: 1px solid #ff6b6b; }
+.element-badge.earth { color: #69db7c; border: 1px solid #69db7c; }
+.element-badge.air { color: #74c0fc; border: 1px solid #74c0fc; }
+.element-badge.water { color: #9775fa; border: 1px solid #9775fa; }
+
+.modality-badge {
+  color: var(--text-muted);
+  border: 1px solid var(--text-muted);
+}

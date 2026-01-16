@@ -1,0 +1,248 @@
+.journal-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.current-energy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.energy-moon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.energy-emoji {
+  font-size: 3rem;
+}
+
+.energy-moon h3 {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+}
+
+.energy-moon p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.energy-guidance {
+  flex: 1;
+  min-width: 250px;
+}
+
+.energy-guidance h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.energy-guidance p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.new-entry-btn {
+  align-self: flex-start;
+}
+
+/* Journal Editor */
+.journal-editor {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.journal-editor h3 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.prompt-section {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.prompt-section h4 {
+  font-size: 0.9rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.prompts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.prompts-list li {
+  color: var(--text-secondary);
+  font-style: italic;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.prompts-list li::before {
+  content: '✧';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  opacity: 0.5;
+}
+
+.editor-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.editor-section label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.editor-section input,
+.editor-section textarea {
+  margin-bottom: var(--spacing-sm);
+}
+
+.add-item-btn {
+  font-size: 0.85rem;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: transparent;
+  border: 1px dashed var(--accent-gold);
+  color: var(--accent-gold);
+  opacity: 0.7;
+}
+
+.add-item-btn:hover {
+  opacity: 1;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.editor-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* Journal Entries */
+.journal-entries h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.entry-card {
+  position: relative;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.entry-date {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.entry-moon {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.entry-content {
+  margin-bottom: var(--spacing-md);
+}
+
+.entry-content p {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.entry-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.entry-section h4 {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.entry-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.entry-section li {
+  padding-left: var(--spacing-md);
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.entry-section li::before {
+  content: '☽';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.entry-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.entry-actions button {
+  font-size: 0.8rem;
+  padding: var(--spacing-xs) var(--spacing-md);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  max-width: 400px;
+  margin: var(--spacing-xl) auto;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: var(--spacing-lg);
+}
+
+.empty-state h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.empty-state p {
+  color: var(--text-muted);
+}
