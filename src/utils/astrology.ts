@@ -51,7 +51,7 @@ function calculatePlanetLongitude(planet: string, T: number): { longitude: numbe
 
   switch (planet) {
     case 'Sun':
-      L = 280.4664567 + 360007.6982779 * T + 0.03032028 * T * T;
+      L = 280.4664567 + 36000.76982779 * T + 0.0003032028 * T * T;
       break;
     case 'Moon':
       L = 218.3164477 + 481267.88123421 * T - 0.0015786 * T * T;
@@ -247,7 +247,7 @@ export function getMoonPhase(date: Date = new Date()): {
   const jd = toJulianDay(date);
   const T = toJ2000Centuries(jd);
 
-  const sunLong = normalizeAngle(280.4664567 + 360007.6982779 * T);
+  const sunLong = normalizeAngle(280.4664567 + 36000.76982779 * T);
   const moonLong = normalizeAngle(218.3164477 + 481267.88123421 * T);
 
   const phase = normalizeAngle(moonLong - sunLong);
