@@ -3,6 +3,16 @@ import { useProfile, geocodeLocation } from '../hooks/useProfile';
 import { UserProfile } from '../types';
 import './ProfileForm.css';
 
+// Format date without timezone issues
+function formatBirthDate(dateStr: string): string {
+  const [year, month, day] = dateStr.split('-').map(Number);
+  const months = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const date = new Date(year, month - 1, day);
+  return `${days[date.getDay()]}, ${months[month - 1]} ${day}, ${year}`;
+}
+
 export function ProfileForm() {
   const { profile, hasProfile, loading, saveProfile, clearProfile } = useProfile();
   const [formData, setFormData] = useState<UserProfile>(profile);
@@ -221,12 +231,7 @@ export function ProfileForm() {
                   <dt>Name</dt>
                   <dd>{profile.name}</dd>
                   <dt>Birth Date</dt>
-                  <dd>{new Date(profile.birthDate).toLocaleDateString('en-US', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}</dd>
+                  <dd>{formatBirthDate(profile.birthDate)}</dd>
                   {profile.birthTime && (
                     <>
                       <dt>Birth Time</dt>
