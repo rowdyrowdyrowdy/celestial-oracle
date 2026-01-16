@@ -1,11 +1,18 @@
-import { useState, FormEvent } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import { useProfile, geocodeLocation } from '../hooks/useProfile';
 import { UserProfile } from '../types';
 import './ProfileForm.css';
 
 export function ProfileForm() {
-  const { profile, hasProfile, saveProfile, clearProfile } = useProfile();
+  const { profile, hasProfile, loading, saveProfile, clearProfile } = useProfile();
   const [formData, setFormData] = useState<UserProfile>(profile);
+
+  // Sync form data when profile loads from localStorage
+  useEffect(() => {
+    if (!loading) {
+      setFormData(profile);
+    }
+  }, [profile, loading]);
   const [isGeolocating, setIsGeolocating] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
